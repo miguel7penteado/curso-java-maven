@@ -1,6 +1,6 @@
 # Curso Maven - Formação JAVA Raiz
 
-A ferramenta MAVEN para geração de projetos JAVA (abordagem sem IDE).
+A ferramenta **MAVEN** para geração de projetos `JAVA`.
 
 ------------------------------------------------------------------------
 
