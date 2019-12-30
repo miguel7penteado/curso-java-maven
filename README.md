@@ -149,6 +149,9 @@ Exemplo:
     <configuration>
             <source>1.8</source>
             <target>1.8</target>
+            <compilerArgs>
+            	<arg>-Xlint:unchecked</arg>
+            </compilerArgs>
             <-- outras customizações -->
     </configuration>
 </plugin>
