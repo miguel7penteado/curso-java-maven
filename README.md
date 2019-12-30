@@ -4,7 +4,7 @@ A ferramenta **MAVEN** para geração de projetos `JAVA`.
 
 ------------------------------------------------------------------------
 
-### Introdução
+### 1. Introdução
 
 **Maven** é a ferramenta de construção mais usada no mundo `Java`. 
 Principalmente, é apenas uma estrutura de execução de plug-in na qual 
@@ -19,7 +19,7 @@ formatado em xml chamado **POM.xml**
 
 ------------------------------------------------------------------------
 
-### Ciclos de Vida
+### 2. Ciclos de Vida
 
 Uma vez que, como dissemos, **todos os trabalhos são por plug-ins**
 existem plugins chamados `core` que são responsáveis pelos **ciclos de 
@@ -45,7 +45,7 @@ abordarão esses objetivos e as ligações internas em detalhes.
 
 ------------------------------------------------------------------------
 
-### Plugins dos Ciclos de Vida
+### 3. Plugins dos Ciclos de Vida
 
 Todos os plugin utilizados devem ser declarados no **pom.xml** em uma 
 sessão xml chamada ```<build>...</build>```. (Vamos exemplificar um 
@@ -99,7 +99,7 @@ O plugin **Verifier**
 O plugin **Install**
 O plugin **Deploy**
 
-#### Ciclo de Vida Default - Processando Recursos - `Plugin Resources`
+#### 3.1 Ciclo de Vida Default - Processando Recursos - `Plugin Resources`
 ------------------------------------------------------------------------
 O plug-in `Resources` **copia arquivos dos diretórios de recursos de 
 entrada para um diretório de saída**. O plug-in tem **três objetivos**,
@@ -113,7 +113,25 @@ do teste no diretório de saída do teste;
 diretório de saída, exigindo que especifiquemos os arquivos de entrada e o 
 diretório de saída;
 
-
+Exemplo: 
+```xml
+<plugin>
+	<artifactId>maven-resources-plugin</artifactId>
+	<version>3.0.2</version>
+	<configuration>
+		<outputDirectory>saida-arquivos</outputDirectory>
+		<resources>
+			<resource>
+				<directory>entrada-arquivos</directory>
+				<excludes>
+					<exclude>*.png</exclude>
+				</excludes>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</configuration>
+</plugin>
+```
 
 
 
