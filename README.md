@@ -77,6 +77,9 @@ elemento de empacotamento da POM. Por uma questão de brevidade,
 examinaremos as ligações dos tipos de empacotamentos mais comuns: 
 **jar** e **war** .
 
+Aqui está uma lista dos objetivos associados a cada fase do ciclo de 
+vida **default** no formato "fase -> plugin: objetivo":
+
 
 
 
