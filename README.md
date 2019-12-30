@@ -99,6 +99,19 @@ O plugin **Verifier**
 O plugin **Install**
 O plugin **Deploy**
 
+#### Ciclo de Vida Default - Processando Recursos - `Plugin Resources`
+------------------------------------------------------------------------
+O plug-in `Resources` **copia arquivos dos diretórios de recursos de 
+entrada para um diretório de saída**. O plug-in tem **três objetivos**,
+que são diferentes apenas na forma como os diretórios de recursos e saída 
+são especificados.
+* - **resources** - copia recursos que fazem parte do código fonte 
+principal para o diretório de saída principal;
+* - **testResources** - copia recursos que fazem parte do código-fonte 
+do teste no diretório de saída do teste;
+* - **copy-resources** - copia arquivos de recursos arbitrários para um
+diretório de saída, exigindo que especifiquemos os arquivos de entrada e o 
+diretório de saída;
 
 
 
