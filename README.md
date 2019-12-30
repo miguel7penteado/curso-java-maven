@@ -115,22 +115,27 @@ diretório de saída;
 
 Exemplo: 
 ```xml
-<plugin>
-	<artifactId>maven-resources-plugin</artifactId>
-	<version>3.0.2</version>
-	<configuration>
-		<outputDirectory>saida-arquivos</outputDirectory>
-		<resources>
-			<resource>
-				<directory>entrada-arquivos</directory>
-				<excludes>
-					<exclude>*.png</exclude>
-				</excludes>
-				<filtering>true</filtering>
-			</resource>
-		</resources>
-	</configuration>
-</plugin>
+<build>
+	<plugins>
+		<plugin>
+			<artifactId>maven-resources-plugin</artifactId>
+			<version>3.0.2</version>
+			<configuration>
+				<outputDirectory>saida-arquivos</outputDirectory>
+				<resources>
+					<resource>
+						<directory>entrada-arquivos</directory>
+						<excludes>
+							<exclude>*.png</exclude>
+						</excludes>
+						<filtering>true</filtering>
+					</resource>
+				</resources>
+			</configuration>
+		</plugin>
+	</plugins>
+</build>
+		
 ```
 #### 3.2 Ciclo de Vida Default - Compilação de código - `Plugin Compiler`
 ------------------------------------------------------------------------
@@ -143,17 +148,24 @@ fases específicas do ciclo de vida padrão:
 
 Exemplo:
 ```xml
-<plugin>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.7.0</version>
-    <configuration>
-            <source>1.8</source>
-            <target>1.8</target>
-            <compilerArgs>
-            	<arg>-Xlint:unchecked</arg>
-            </compilerArgs>
-            <-- outras customizações -->
-    </configuration>
-</plugin>
+<build>
+	<plugins>
+		<plugin>
+		    <artifactId>maven-compiler-plugin</artifactId>
+		    <version>3.7.0</version>
+		    <configuration>
+			    <source>1.8</source>
+			    <target>1.8</target>
+			    <compilerArgs>
+				<arg>-Xlint:unchecked</arg>
+			    </compilerArgs>
+			    <-- outras customizações -->
+		    </configuration>
+		</plugin>
+	</plugins>
+</build>
 ```
+
+#### 3.3 Ciclo de Vida Default - Compilação de código - `Plugin Compiler`
+------------------------------------------------------------------------
 
