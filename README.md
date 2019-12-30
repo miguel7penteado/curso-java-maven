@@ -14,6 +14,9 @@ fornecendo links para outros tutoriais com foco no que esses
 plug-ins podem fazer e como seus objetivos estão vinculados aos 
 **ciclos de vida** da construção.
 
+Todas as instruções que o maven deve executar são definidas em um arquivo
+formatado em xml chamado **POM.xml**
+
 ------------------------------------------------------------------------
 
 ### Ciclos de Vida
@@ -39,4 +42,40 @@ compilação anterior.
    Muitas fases nos três ciclos de vida são automaticamente vinculadas 
 aos objetivos dos plugins principais. Os artigos referenciados 
 abordarão esses objetivos e as ligações internas em detalhes.
+
+------------------------------------------------------------------------
+
+### Plugins dos Ciclos de Vida
+
+Todos os plugin utilizados devem ser declarados no **pom.xml** em uma 
+sessão xml chamada **<build>...</build>** . (Vamos exemplificar um 
+arquivo **pom.xml** completo posteriormente.)
+
+```xml
+...
+<build>
+    <plugins>
+        <plugin>
+            <artifactId>plugin1</artifactId>
+            <version>versao_do_plugin1</version>
+        </plugin>
+        <plugin>
+            <artifactId>plugin2</artifactId>
+            <version>versao_do_plugin2</version>
+        </plugin>      
+        <plugin>
+            <artifactId>plugin3</artifactId>
+            <version>versao_do_plugin3</version>
+        ...  
+        </plugin>      
+    </plugins>
+</build>
+...
+```
+
+
+
+
+
+
 
