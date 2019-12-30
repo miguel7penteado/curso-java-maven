@@ -80,6 +80,16 @@ examinaremos as ligações dos tipos de empacotamentos mais comuns:
 Aqui está uma lista dos objetivos associados a cada fase do ciclo de 
 vida **default** no formato "fase -> plugin: objetivo":
 
+1. process-resources -> resources:resources
+2. compile -> compiler:compile
+3. process-test-resources -> resources:testResources
+4. test-compile -> compiler:testCompile
+5. test -> surefire:test
+6. package -> ejb:ejb or ejb3:ejb3 or jar:jar or par:par or rar:rar or war:war
+7. install -> install:install
+8. deploy -> deploy:deploy
+
+
 
 
 
