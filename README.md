@@ -197,3 +197,12 @@ cujo nome começa com **Test** ou termina com **Test**, **Tests** ou
 	</plugins>
 </build>
 ```
+
+#### 3.4 Ciclo de Vida Default - Teste do projeto - `Plugin failsafe`
+------------------------------------------------------------------------
+O plug-in à prova de falhas é usado para testes de integração de um 
+projeto. Tem dois objetivos:
+* **integration-test** - executa testes de integração. Esse objetivo está 
+vinculado à fase de teste de integração por padrão;
+* **verify** - verifique se os testes de integração foram aprovados. Esse
+objetivo está vinculado à fase de verificação por padrão;
