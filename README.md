@@ -275,3 +275,25 @@ de verificação.
 	</plugins>
 </build>		
 ```
+------------------------------------------------------------------------
+O local padrão do arquivo de verificação é 
+**src/test/verifier/verifications.xml**. Nós devemos definir um valor 
+para o parâmetro **notificationFile** se quisermos usar outro arquivo.
+
+```xml
+<verifications
+  xmlns="http://maven.apache.org/verifications/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/verifications/1.0.0 
+  http://maven.apache.org/xsd/verifications-1.0.0.xsd">
+    <files>
+        <file>
+            <location>input-resources/baeldung.txt</location>
+            <contains>Welcome</contains>
+        </file>
+    </files>
+</verifications>
+```
+Este arquivo de verificação confirma que existe um arquivo chamado 
+**input-resources/baeldung.txt** e que contém a palavra Bem-vindo. 
+Já adicionamos esse arquivo antes, portanto, a execução do objetivo é bem-sucedida.
