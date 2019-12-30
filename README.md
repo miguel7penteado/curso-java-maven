@@ -139,7 +139,7 @@ Exemplo:
 ```
 #### 3.2 Ciclo de Vida Default - Compilação de código - `Plugin Compiler`
 ------------------------------------------------------------------------
-O plug-in do compilador é usado para compilar o código-fonte de um 
+O plug-in do `compilador` é usado para compilar o código-fonte de um 
 projeto Maven. Este plug-in tem dois objetivos, que já estão vinculados a
 fases específicas do ciclo de vida padrão:
 
@@ -165,7 +165,35 @@ Exemplo:
 	</plugins>
 </build>
 ```
+Agora para evocar a compilação:
+```sh
+mvn -q clean compile exec:java -Dexec.mainClass="meu.pacote.NomeClassePrincipal"
+```
 
-#### 3.3 Ciclo de Vida Default - Compilação de código - `Plugin Compiler`
+#### 3.3 Ciclo de Vida Default - Teste do projeto - `Plugin surefire`
 ------------------------------------------------------------------------
+O plugin `surefire` tem por objetivo testar o projeto utilizando 
+frameworks **JUnit** e **TestNG** para isso. Por padrão, esse plug-in 
+gera relatórios XML no diretório target / surefire-reports.
+Por padrão, o surefire inclui automaticamente todas as classes de teste
+cujo nome começa com **Test** ou termina com **Test**, **Tests** ou 
+**TestCase**.
 
+```xml
+<build>
+	<plugins>
+		<plugin>
+		    <artifactId>maven-surefire-plugin</artifactId>
+		    <version>2.21.0</version>
+		    <configuration>
+			<excludes>
+			    <exclude>DataTest.java</exclude>
+			</excludes>
+			<includes>
+			    <include>DataCheck.java</include>
+			</includes>
+		    </configuration>
+		</plugin>
+	</plugins>
+</build>
+```
