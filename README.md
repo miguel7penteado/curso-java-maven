@@ -72,8 +72,10 @@ arquivo **pom.xml** completo posteriormente.)
 </build>
 ...
 ```
-
-
+As ligações internas do ciclo de vida **default** dependem do valor do 
+elemento de empacotamento da POM. Por uma questão de brevidade, 
+examinaremos as ligações dos tipos de empacotamentos mais comuns: 
+**jar** e **war** .
 
 
 
