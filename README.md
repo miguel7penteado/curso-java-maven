@@ -48,7 +48,7 @@ abordarão esses objetivos e as ligações internas em detalhes.
 ### Plugins dos Ciclos de Vida
 
 Todos os plugin utilizados devem ser declarados no **pom.xml** em uma 
-sessão xml chamada **<build>...</build>** . (Vamos exemplificar um 
+sessão xml chamada ```<build>...</build>```. (Vamos exemplificar um 
 arquivo **pom.xml** completo posteriormente.)
 
 ```xml
