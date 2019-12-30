@@ -252,9 +252,9 @@ corretamente.
 O plug-in `verifier` tem apenas um objetivo - **verify**. Esse 
 objetivo verifica a existência ou não de arquivos e diretórios, 
 opcionalmente verificando o conteúdo do arquivo em relação a uma 
-expressão regular.Apesar do nome, o objetivo de verificação está 
-vinculado à fase de teste de integração por padrão, em vez da fase de 
-verificação.
+expressão regular. Apesar do nome, o objetivo de verificação está 
+vinculado à **fase de teste** de integração por padrão, em vez da fase
+de verificação.
 
 ```xml
 <build>
