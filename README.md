@@ -246,3 +246,33 @@ de integração seja executada, onde são executadas operações de limpeza.
 Testes com falha, se houver, são relatados apenas durante a fase de 
 verificação, depois que o ambiente de teste de integração foi desativado 
 corretamente.
+
+#### 3.5 Ciclo de Vida Default - Teste do projeto - `Plugin verifier`
+------------------------------------------------------------------------
+O plug-in `verifier` tem apenas um objetivo - **verify**. Esse 
+objetivo verifica a existência ou não de arquivos e diretórios, 
+opcionalmente verificando o conteúdo do arquivo em relação a uma 
+expressão regular.Apesar do nome, o objetivo de verificação está 
+vinculado à fase de teste de integração por padrão, em vez da fase de 
+verificação.
+
+```xml
+<build>
+	<plugins>
+		<plugin>
+		    <artifactId>maven-verifier-plugin</artifactId>
+		    <version>1.1</version>
+		    <configuration>
+			<verificationFile>input-resources/verifications.xml</verificationFile>
+		    </configuration>
+		    <executions>
+			<execution>
+			    <goals>
+				<goal>verify</goal>
+			    </goals>
+			</execution>
+		    </executions>
+		</plugin>
+	</plugins>
+</build>		
+```
