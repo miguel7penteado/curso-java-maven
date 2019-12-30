@@ -24,7 +24,7 @@ vida** da construção do seu projeto.
 O Maven define **três** ciclos de vida de construção: 
 
 * **default** ou padrão;
-* **site **;
+* **site** para criação de um site;
 * **clean** ou limpeza.
 
 Cada ciclo de vida é composto de **várias fases**, que **são executadas na 
