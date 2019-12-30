@@ -132,7 +132,10 @@ Exemplo:
 	</configuration>
 </plugin>
 ```
-
-
+#### 3.2 Ciclo de Vida Default - Compilação de código - `Plugin Compiler`
+------------------------------------------------------------------------
+O plug-in do compilador é usado para compilar o código-fonte de um 
+projeto Maven. Este plug-in tem dois objetivos, que já estão vinculados a
+fases específicas do ciclo de vida padrão:
 
 
