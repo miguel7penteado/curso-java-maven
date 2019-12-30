@@ -207,6 +207,15 @@ vinculado à fase de teste de integração por padrão;
 * **verify** - verifique se os testes de integração foram aprovados. Esse
 objetivo está vinculado à fase de verificação por padrão;
 
+Este plugin executa métodos em classes de teste, assim como o 
+plugin surefire. Podemos configurar os dois plugins de maneiras 
+semelhantes. No entanto, existem algumas diferenças cruciais entre eles. 
+
+Primeiro, diferentemente do surefire (consulte este artigo) incluído no
+super pom.xml, o plug-in à prova de falhas com seus objetivos deve ser 
+explicitamente especificado no pom.xml para fazer parte de um ciclo de 
+vida da construção:
+
 ```xml
 <build>
 	<plugins>
@@ -228,3 +237,12 @@ objetivo está vinculado à fase de verificação por padrão;
 	</plugins>
 </build>
 ```
+------------------------------------------------------------------------
+Segundo, o plug-in à prova de falhas executa e verifica testes usando 
+objetivos diferentes. Uma falha de teste na fase de teste de integração 
+não interrompe o processo, permitindo que a fase de pós-teste
+de integração seja executada, onde são executadas operações de limpeza.
+
+Testes com falha, se houver, são relatados apenas durante a fase de 
+verificação, depois que o ambiente de teste de integração foi desativado 
+corretamente.
