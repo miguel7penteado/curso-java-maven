@@ -237,7 +237,6 @@ vida da construção:
 	</plugins>
 </build>
 ```
-------------------------------------------------------------------------
 Segundo, o plug-in à prova de falhas executa e verifica testes usando 
 objetivos diferentes. Uma falha de teste na fase de teste de integração 
 não interrompe o processo, permitindo que a fase de pós-teste
