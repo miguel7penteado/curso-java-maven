@@ -99,7 +99,7 @@ O plugin **Verifier**
 O plugin **Install**
 O plugin **Deploy**
 
-#### 3.1 Ciclo de Vida Default - Processando Recursos - `Plugin Resources`
+#### 3.1.1 Ciclo de Vida Default - Processando Recursos - `Plugin Resources`
 ------------------------------------------------------------------------
 O plug-in `Resources` **copia arquivos dos diretórios de recursos de 
 entrada para um diretório de saída**. O plug-in tem **três objetivos**,
@@ -137,7 +137,7 @@ Exemplo:
 </build>
 		
 ```
-#### 3.2 Ciclo de Vida Default - Compilação de código - `Plugin Compiler`
+#### 3.1.2 Ciclo de Vida Default - Compilação de código - `Plugin Compiler`
 ------------------------------------------------------------------------
 O plug-in do `compilador` é usado para compilar o código-fonte de um 
 projeto Maven. Este plug-in tem dois objetivos, que já estão vinculados a
@@ -170,7 +170,7 @@ Agora para evocar a compilação:
 mvn -q clean compile exec:java -Dexec.mainClass="meu.pacote.NomeClassePrincipal"
 ```
 
-#### 3.3 Ciclo de Vida Default - Teste do projeto - `Plugin surefire`
+#### 3.1.3 Ciclo de Vida Default - Teste do projeto - `Plugin surefire`
 ------------------------------------------------------------------------
 O plugin `surefire` tem por objetivo testar o projeto utilizando 
 frameworks **JUnit** e **TestNG** para isso. Por padrão, esse plug-in 
@@ -198,7 +198,7 @@ cujo nome começa com **Test** ou termina com **Test**, **Tests** ou
 </build>
 ```
 
-#### 3.4 Ciclo de Vida Default - Teste do projeto - `Plugin failsafe`
+#### 3.1.4 Ciclo de Vida Default - Teste do projeto - `Plugin failsafe`
 ------------------------------------------------------------------------
 O plug-in `failsafe` é usado para testes de integração de um 
 projeto. Tem dois objetivos:
@@ -246,7 +246,7 @@ Testes com falha, se houver, são relatados apenas durante a fase de
 verificação, depois que o ambiente de teste de integração foi desativado 
 corretamente.
 
-#### 3.5 Ciclo de Vida Default - Teste do projeto - `Plugin verifier`
+#### 3.1.5 Ciclo de Vida Default - Teste do projeto - `Plugin verifier`
 ------------------------------------------------------------------------
 O plug-in `verifier` tem apenas um objetivo: 
 * **verify**. Esse objetivo verifica a existência ou não de arquivos
@@ -300,7 +300,7 @@ Este arquivo de verificação confirma que existe um arquivo chamado
 **input-resources/baeldung.txt** e que contém a palavra Bem-vindo. 
 Já adicionamos esse arquivo antes, portanto, a execução do objetivo é bem-sucedida.
 
-#### 3.6 Ciclo de Vida Default - Instalação do projeto - `Plugin verifier`
+#### 3.1.6 Ciclo de Vida Default - Instalação do projeto - `Plugin verifier`
 ------------------------------------------------------------------------
 O plug-in `install` adiciona **artefatos** ao repositório
 local. Esse plug-in está incluído no super POM, portanto, um POM 
@@ -317,7 +317,7 @@ Na maioria dos casos, o plug-in de instalação não precisa de nenhuma
 configuração personalizada. É por isso que não vamos nos aprofundar 
 neste plugin.
 
-#### 3.7 Ciclo de Vida Default - Implantação do projeto - `Plugin deploy`
+#### 3.1.7 Ciclo de Vida Default - Implantação do projeto - `Plugin deploy`
 ------------------------------------------------------------------------
 O plug-in `deploy` implementa a fase de implantação, **enviando artefatos
 para um repositório remoto para compartilhar com outros desenvolvedores**.
@@ -331,4 +331,28 @@ necessário adicionar esse plug-in ao POM.
 Este plugin possui dois objetivos:
 * **deploy**  vinculado à fase de implantação por padrão;
 * **deploy-file** implementando um artefato em um repositório remoto;
+
+#### 3.2.1 Ciclo de Vida Site - Criação do site - `Plugin site`
+------------------------------------------------------------------------
+Por padrão, o ciclo de vida **site** do Maven tem duas fases 
+vinculadas aos objetivos do plug-in `site`: a fase **site** vinculada 
+ao objetivo do site e a fase de **implantação do site** está vinculada
+ao objetivo de implantação.
+
+* **site** - gere um site para um único projeto; o site gerado mostra 
+apenas informações sobre os artefatos especificados no POM;
+* **deploy** - implanta o site gerado na URL especificada no elemento 
+distributionManagement do POM;
+
+Além de site e implantação, o plug-in `site` tem vários outros objetivos
+para personalizar o conteúdo dos arquivos gerados e controlar o 
+processo de implantação.
+
+#### 3.2.2 Ciclo de Vida Clean - Limpeza do projeto - `Plugin clean`
+------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------
+
+### 4. Plugins dos Ciclos de Vida `Site`
 
