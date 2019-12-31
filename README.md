@@ -248,10 +248,12 @@ corretamente.
 
 #### 3.5 Ciclo de Vida Default - Teste do projeto - `Plugin verifier`
 ------------------------------------------------------------------------
-O plug-in `verifier` tem apenas um objetivo - **verify**. Esse 
-objetivo verifica a existência ou não de arquivos e diretórios, 
-opcionalmente verificando o conteúdo do arquivo em relação a uma 
-expressão regular. Apesar do nome, o objetivo de verificação está 
+O plug-in `verifier` tem apenas um objetivo: 
+* **verify**. Esse objetivo verifica a existência ou não de arquivos
+e diretórios, opcionalmente verificando o conteúdo do arquivo em relação
+a uma expressão regular;
+
+Apesar do nome, o objetivo de verificação está 
 vinculado à **fase de teste** de integração por padrão, em vez da fase
 de verificação.
 
@@ -297,3 +299,36 @@ para o parâmetro **notificationFile** se quisermos usar outro arquivo.
 Este arquivo de verificação confirma que existe um arquivo chamado 
 **input-resources/baeldung.txt** e que contém a palavra Bem-vindo. 
 Já adicionamos esse arquivo antes, portanto, a execução do objetivo é bem-sucedida.
+
+#### 3.6 Ciclo de Vida Default - Instalação do projeto - `Plugin verifier`
+------------------------------------------------------------------------
+O plug-in `install` adiciona **artefatos** ao repositório
+local. Esse plug-in está incluído no super POM, portanto, um POM 
+não precisa incluí-lo explicitamente.
+
+O objetivo mais notável desse plug-in é a **instalação**, que 
+é vinculada à fase de instalação por padrão.
+
+Outros objetivos são o arquivo de instalação usado para instalar
+automaticamente artefatos externos no repositório local e ajudar a mostrar
+informações no próprio plug-in.
+
+Na maioria dos casos, o plug-in de instalação não precisa de nenhuma 
+configuração personalizada. É por isso que não vamos nos aprofundar 
+neste plugin.
+
+#### 3.7 Ciclo de Vida Default - Implantação do projeto - `Plugin deploy`
+------------------------------------------------------------------------
+O plug-in `deploy` implementa a fase de implantação, **enviando artefatos
+para um repositório remoto para compartilhar com outros desenvolvedores**.
+
+Além do próprio artefato, esse plug-in garante que todas as informações 
+associadas, como POMs, **metadados ou valores de hash**, estejam corretas.
+
+O plug-in `deploy` especificado no super POM, portanto, não é 
+necessário adicionar esse plug-in ao POM.
+
+Este plugin possui dois objetivos:
+* **deploy**  vinculado à fase de implantação por padrão;
+* **deploy-file** implementando um artefato em um repositório remoto;
+
