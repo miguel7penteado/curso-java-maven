@@ -350,7 +350,34 @@ processo de implantação.
 
 #### 3.2.2 Ciclo de Vida Clean - Limpeza do projeto - `Plugin clean`
 ------------------------------------------------------------------------
+O ciclo de vida **limpeza** possui apenas uma fase chamada **clean** que 
+é automaticamente vinculada ao único objetivo do plug-in `clean`. 
+Este objetivo pode, portanto, ser executado com o comando `mvn clean`.
 
+O plug-in limpo já está incluído no super POM, portanto, podemos usá-lo
+sem especificar nada no POM do projeto.
+
+Esse plug-in, como o nome indica, limpa os arquivos e diretórios gerados
+durante a compilação anterior. 
+Por padrão, o plug-in **remove o diretório de destino**.
+
+```xml
+<build>
+	<plugins>
+		<plugin>
+		    <artifactId>maven-clean-plugin</artifactId>
+		    <version>3.0.0</version>
+		    <configuration>
+			<filesets>
+			    <fileset>
+				<directory>output-resources</directory>
+			    </fileset>
+			</filesets>
+		    </configuration>
+		</plugin>
+	</plugins>
+</build>			
+```
 
 ------------------------------------------------------------------------
 
